@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from . import models
 
-class PagoAlumnoSerializer(serializers.ModelSerializer):
+class PagoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.PagoAlumno
+        model = models.Pago
         fields = '__all__'

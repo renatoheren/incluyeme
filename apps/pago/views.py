@@ -4,6 +4,6 @@ from . import models
 from . import serializers
 
 # Create your views here.
-class PagoAlumnoViewset(viewsets.ModelViewSet):
-    queryset = models.PagoAlumno.objects.all()
-    serializer_class = serializers.PagoAlumnoSerializer
+class PagoViewset(viewsets.ModelViewSet):
+    queryset = models.Pago.objects.all()
+    serializer_class = serializers.PagoSerializer

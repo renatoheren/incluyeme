@@ -1,12 +1,12 @@
 from django.contrib import admin
-from apps.pago.models import Pago, PagoAlumno
+from apps.pago.models import Pago, Boleta
 
 # Register your models here.
 class PagoAdmin(admin.ModelAdmin):
     pass
 
-class PagoAlumnoAdmin(admin.ModelAdmin):
+class BoletaAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(Pago, PagoAdmin)
-admin.site.register(PagoAlumno, PagoAlumnoAdmin)
+admin.site.register(Boleta, BoletaAdmin)
