@@ -13,5 +13,5 @@ class ClaseViewset(viewsets.ModelViewSet):
         start  = self.request.query_params.get('start', None)
         end    = self.request.query_params.get('end', None)
         if alumno is not None:
-            queryset = queryset.filter(alumno=alumno,clase__fecha__range=[start, end])
+            queryset = queryset.filter(alumno__username=alumno,clase__fecha__range=[start, end])
         return queryset
