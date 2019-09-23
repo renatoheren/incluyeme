@@ -29,7 +29,7 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
     '192.168.0.101',
-    '137.135.67.199'
+    '40.117.98.54'
 ]
 
 # Application definition
@@ -90,10 +90,10 @@ WSGI_APPLICATION = 'incluyeme.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'incluyeme',
+        'NAME': 'universidad1',
         'USER': 'postgres',
-        'PASSWORD': 'admin',
-        'HOST': '137.135.67.199',
+        'PASSWORD': 'RHerenci@977',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
