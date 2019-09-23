@@ -7,6 +7,5 @@ from apps.curso import views as curso_views
 router = routers.DefaultRouter()
 router.register(r'clases', horario_views.ClaseViewset, basename="clases")
 router.register(r'cursos', curso_views.MatriculaViewset, basename="cursos")
-router.register(r'evaluaciones', nota_views.EvaluacionViewset)
-router.register(r'notas', nota_views.NotaAlumnoViewset)
+router.register(r'notas', nota_views.NotaAlumnoViewset, basename="notas")
 router.register(r'pagos', pago_views.PagoViewset, basename="pagos")

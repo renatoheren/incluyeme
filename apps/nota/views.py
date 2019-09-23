@@ -9,5 +9,11 @@ class EvaluacionViewset(viewsets.ModelViewSet):
     serializer_class = serializers.EvaluacionSerializer
 
 class NotaAlumnoViewset(viewsets.ModelViewSet):
-    queryset = models.NotaAlumno.objects.all()
     serializer_class = serializers.NotaAlumnoSerializer
+
+    def get_queryset(self):
+        queryset = models.NotaAlumno.objects.all()
+        alumno = self.request.query_params.get('alumno', None)
+        if alumno is not None:
+            queryset = queryset.filter(alumno__username=alumno)
+        return queryset
